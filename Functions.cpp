@@ -1,66 +1,125 @@
-﻿#include <iostream>
-using namespace std;
-
-int main()
-{
-    setlocale(0, "");
-    cout << "[+] Панель Функций " << endl << endl;
-    cout << "[1] Очищение консоли " << endl;
-    cout << "[2] Изменение цвета фона консоли " << endl;
-    cout << "[3] Изменение цвета текста консоли " << endl;
-    cout << "[4] Вывод размера типа данных INT " << endl;
-    cout << "[5] Вывод размера типа данных CHAR " << endl;
-    cout << "[6] Вывод размера типа данных DOUBLE " << endl;
-    cout << "[7] Вывод размера типа данныx FLOAT " << endl;
-    cout << "[8] Вывод размера типа данных BOOL" << endl;
-    cout << "[9] Вывод сообщения 'Привет я функция'" << endl;
-    cout << "[10] Вывод квадрата 5х5" << endl;
-
-    cout << "Выберите функцию: ";
-    int choise;
-    cin >> choise;
-    switch (choise)
-    {
-    case 1:
-        system("cls");
-        break;
-    case 2:
-        system("color F1");
-        break;
-    case 3:
-        system("color 6");
-        break;
-    case 4:
-        cout << "Размер типа данных INT = 4 байтам" << endl;
-        break;
-    case 5:
-        cout << "Размер типа данных CHAR = 1 байту" << endl;
-        break;
-    case 6:
-        cout << "Размер типа данных DOUBLE = 8 байтам" << endl;
-        break;
-    case 7:
-        cout << "Размер типа данных FLOAT = 4 байтам" << endl;
-        break;
-    case 8:
-        cout << "Размер типа данных BOLL = 1 байту" << endl;
-        break;
-    case 9:
-        cout << "Привет я функция!" << endl;
-        break;
-    case 10:
-        cout << "Введите любой символ:";
-        int symbol;
-        cin >> symbol;
-        for (int i = 0; i < 5; i++)
-        {
-            for (int j = 0; j < 5; j++)
-            {
-                cout << symbol << " ";
-            }
-            cout << endl;
-        }
-        break;
-    }
-    int _; cin >> _;
-}
+ #include <iostream> 
+  
+ using namespace std; 
+  
+ void consoleClear() { 
+         system("cls"); 
+ } 
+  
+ void consoleBackground() { 
+         system("color 30"); 
+ } 
+  
+ void consoleFont() { 
+         system("color 03"); 
+ } 
+  
+ void getSizeInt() { 
+         cout << sizeof(int); 
+  
+ } 
+  
+ void  getSizeDouble() { 
+         cout << sizeof(double); 
+ } 
+  
+ void  getSizeChar() { 
+         cout << sizeof(char); 
+ } 
+  
+ void  getSizeFloat() { 
+         cout << sizeof(float); 
+ } 
+  
+ void  getSizeBool() { 
+         cout << sizeof(bool); 
+ } 
+  
+ string greetings() { 
+         string text = "Привет, пользователь, добро пожаловать в мою функцию!"; 
+         cout << text; 
+         return text; 
+ } 
+  
+ void makeKvadrat() { 
+         string arr[5][5]{ 
+                 {"# ", "# ", "# ", "# ", "# "}, 
+                 {"# ", "# ", "# ", "# ", "# "}, 
+                 {"# ", "# ", "# ", "# ", "# "}, 
+                 {"# ", "# ", "# ", "# ", "# "}, 
+                 {"# ", "# ", "# ", "# ", "# "}, 
+         }; 
+         for (int i = 0; i < 5; i++) { 
+                 for (int j = 0; j < 5; j++) { 
+                         cout << arr[i][j]; 
+                 } 
+                 cout << endl; 
+         } 
+ } 
+  
+  
+  
+  
+  
+ int main() 
+ { 
+         setlocale(0, ""); 
+  
+  
+         cout << "[+]Программа, которая выводит действия\n\n"; 
+         cout << "[+]Выберите действие по номеру:\n"; 
+         cout << "[1]Очищение консоли\n"; 
+         cout << "[2]Изменение цвета фона консоли\n"; 
+         cout << "[3]Изменения цвета текста консоли\n"; 
+         cout << "[4]Вывод размера типа данных INT\n"; 
+         cout << "[5]Вывод размера типа данных DOUBLE\n"; 
+         cout << "[6]Вывод размера типа данных CHAR\n"; 
+         cout << "[7]Вывод размера типа данных FLOAT\n"; 
+         cout << "[8]Вывод размера типа данных BOOL\n"; 
+         cout << "[9]Вывод сообщения\n"; 
+         cout << "[10]Вывод квадрата 5*5\n"; 
+  
+         int choice; 
+         cin >> choice; 
+  
+         switch (choice) 
+         { 
+  
+         case 1: 
+                 consoleClear(); 
+                 break; 
+         case 2: 
+                 consoleBackground(); 
+                 break; 
+         case 3: 
+                 consoleFont(); 
+                 break; 
+         case 4: 
+                 cout << "Размер выбранного типа данных: " << sizeof(int) << endl; 
+                 break; 
+         case 5: 
+                 cout << "Размер выбранного типа данных: " << sizeof(double) << endl; 
+                 break; 
+         case 6: 
+                 cout << "Размер выбранного типа данных: " << sizeof(char) << endl; 
+                 break; 
+         case 7: 
+                 cout << "Размер выбранного типа данных: " << sizeof(float) << endl; 
+                 break; 
+         case 8: 
+                 cout << "Размер выбранного типа данных: " << sizeof(bool) << endl; 
+                 break; 
+         case 9: 
+                 greetings(); 
+                 break; 
+         case 10: 
+                 makeKvadrat(); 
+                 break; 
+         default: 
+                 break; 
+         } 
+  
+  
+         int _; cin >> _; 
+         return 777; 
+ }
