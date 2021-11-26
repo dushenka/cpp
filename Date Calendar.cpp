@@ -2013,6 +2013,6 @@ int main()
 
 
 
-	int _; cin >> _;
-	return 0;
+	system("pause");
+	return 777;
 }
