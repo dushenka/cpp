@@ -69,6 +69,6 @@ int main()
 
 
 	int _; cin >> _;
-	return 0;
+	return 777;
 
 }
