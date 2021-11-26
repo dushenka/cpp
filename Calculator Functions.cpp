@@ -59,5 +59,5 @@ int main()
         cout << "\n[*]Результат: " << Calc(num1, num2, op) << "\n\n";
     }
     system("pause");
-    return 0;
+    return 777;
 }
