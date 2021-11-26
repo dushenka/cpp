@@ -27,4 +27,6 @@ int main()
 	else {
 		cout << "ОШИБКА";
 	}
+    system("pause");
+    return 777;
 }
