@@ -157,8 +157,9 @@ void main() {
             break;
         }
     case 3:
-        return 0;
+        return 707;
     }
 
-    int _; cin >> _;
+    system("pause");
+    return 777;
 }
