@@ -120,6 +120,6 @@
          } 
   
   
-         int _; cin >> _; 
+         system("pause"); 
          return 777; 
  }
