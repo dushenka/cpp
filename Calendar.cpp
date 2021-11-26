@@ -65,7 +65,7 @@ int main()
     default:
         cout << "Выбраного месяца не существует";
         int _; cin >> _;
-        return 0;
+        return 777;
 
     }
 }
